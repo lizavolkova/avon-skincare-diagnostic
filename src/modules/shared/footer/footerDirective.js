@@ -6,6 +6,6 @@ module.exports = /*@ngInject*/
       link: function (scope, element) {
         // Do something awesome
       },
-      template: '<div>This is  footer</div>'
+      templateUrl: 'shared/footer/footer.html'
     };
   };

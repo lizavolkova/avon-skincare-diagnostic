@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports =
-  angular.module('skincareDiagnostic.common.services', []);
+  angular.module('skincareDiagnostic.shared.services', [])
   .factory('configService', require('./configService'));

@@ -13,7 +13,7 @@ global.config = {
       styles: SRC_FOLDER + '/styles/app.scss',
       stylesGlob: SRC_FOLDER + '/styles/**/*.scss',
       templates: SRC_FOLDER + '/modules/**/*.html',
-      templatesHTML: SRC_FOLDER + '/modules/**/*.html',
+      templatesHTML: SRC_FOLDER + '/modules/**/**/*.html',
       templatesCompiled: TMP_FOLDER,
       livereload: [BUILD_FOLDER + '/**/*', '!' + BUILD_FOLDER + '/assets/**/*'],
       modules: './' + SRC_FOLDER + '/modules/index.js'
