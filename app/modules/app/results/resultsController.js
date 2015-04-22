@@ -6,6 +6,8 @@ module.exports = /*@ngInject*/
     $scope.results = [
         { questionId: 0, prodId: 123 },
         { questionId: 1, prodId: 246 }];
-    $scope.productInfo = configService.getProductInfo();
+    $scope.products = configService.getProducts();
 
+    $scope.productInfo = configService.getProductInfo();
+    //console.log($scope.productInfo);
   };

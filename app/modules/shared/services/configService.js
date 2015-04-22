@@ -72,8 +72,16 @@ module.exports = /*@ngInject*/
       getQuestions: function() {
       	return configs.questions;
       },
-      getProductInfo: function(prodId) {
+      getProducts: function() {
       	return configs.products;
+      },
+      getProductInfo: function(prodId) {
+      	var results = configs.products;
+      	var i;
+      	for (i = 0; i < 3; i++) {
+      		return i;
+      	}
+      	
       }
     };
   };
