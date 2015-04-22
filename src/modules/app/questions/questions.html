@@ -1,4 +1,7 @@
 <div class="welcome">
 <h1>Questions section</h1>
-<p>{{welcome}}</p>
+<p>{{currentQuestion.title}}</p>
+<ul>
+	<li ng-repeat="answer in currentQuestion.answers" ng-click="saveAnswer(currentQuestion.id, answer.result)">{{answer.title}}</li>
+</ul>
 </div>

@@ -1,10 +1,11 @@
 'use strict';
 
 module.exports = /*@ngInject*/
-  function socialDirective(/* inject dependencies here, i.e. : $rootScope */) {
+  function socialDirective(configService) {
     return {
       link: function (scope, element) {
         // Do something awesome
+        //console.log(configService.getSocial());
       },
       templateUrl: 'shared/social-icons/social-icons.html'
     };

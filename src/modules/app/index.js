@@ -12,7 +12,8 @@ module.exports =
     require('../shared').name,
     //example app module:
     require('./home').name,
-    require('./questions').name
+    require('./questions').name,
+    require('./results').name
 
     //load extra app modules here, e.g.:
     //require('./frontend').name,
@@ -27,9 +28,14 @@ module.exports =
       controller: 'homeController'
     })
     .state('questions', {
-      url: '/questions',
+      url: '/questions/:id',
       templateUrl: 'app/questions/questions.html',
       controller: 'questionsController'
+    })
+    .state('results', {
+      url: '/results',
+      templateUrl: 'app/results/results.html',
+      controller: 'resultsController'
     });
 
   });
