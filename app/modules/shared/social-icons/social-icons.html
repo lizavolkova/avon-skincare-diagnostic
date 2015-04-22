@@ -1,1 +1,6 @@
-<div>Facebook Twitter</div>
+<div class="social-icons">
+  <a href="#" class="facebook" ng-repeat="icon in socialIcons | filter:{on:true}">
+    <i class="fa fa-{{icon.network}} fa-2x"></i>
+  </a>
+
+</div>

@@ -7,5 +7,6 @@ module.exports =
     require('./services').name,
     require('./header').name,
     require('./footer').name,
-    require('./social-icons').name
+    require('./social-icons').name,
+    require('./productDetail').name
   ]);
