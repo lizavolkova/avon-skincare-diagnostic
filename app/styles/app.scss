@@ -1,0 +1,16 @@
+@import "variables";
+@import "normalize";
+@import "global";
+//CSS for shared components
+@import "../modules/shared/header/header";
+@import "../modules/shared/footer/footer";
+
+//CSS for individual views
+@import "../modules/app/home/home";
+@import "../modules/app/questions/questions";
+@import "../modules/app/results/results";
+
+
+
+
+

@@ -1,4 +1,4 @@
-global.SRC_FOLDER = 'src';
+global.SRC_FOLDER = 'app';
 global.BUILD_FOLDER = 'build';
 global.RELEASE_FOLDER = 'release';
 global.TMP_FOLDER = 'tmp';
@@ -11,7 +11,8 @@ global.config = {
       images: SRC_FOLDER + '/assets/images/**/*',
       scripts: SRC_FOLDER + '/modules/**/*.js',
       styles: SRC_FOLDER + '/styles/app.scss',
-      stylesGlob: SRC_FOLDER + '/styles/**/*.scss',
+      stylesGlob: SRC_FOLDER + '/styles/**/**/*.scss',
+      stylesJS: SRC_FOLDER + '/modules/shared/header/_header.scss',
       templates: SRC_FOLDER + '/modules/**/*.html',
       templatesHTML: SRC_FOLDER + '/modules/**/**/*.html',
       templatesCompiled: TMP_FOLDER,
@@ -40,11 +41,11 @@ global.config = {
   },
   filenames: {
     build: {
-      styles: 'bundle.css',
+      styles: 'styles.css',
       scripts: 'bundle.js'
     },
     release: {
-      styles: 'bundle.min.css',
+      styles: 'styles.min.css',
       scripts: 'bundle.min.js'
     },
     templates: {
