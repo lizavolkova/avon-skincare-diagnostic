@@ -7,7 +7,8 @@
     "postinstall": "npm install browserify@4.2.3 gulp-header"
   },
   "devDependencies": {
-    "browserify-shim": "^3.6.0",
+    "browserify": "^9.0.8",
+    "browserify-shim": "^3.8.5",
     "connect": "^2.24.2",
     "gulp": "^3.8.0",
     "gulp-angular-templatecache": "^1.2.1",
