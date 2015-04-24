@@ -2,7 +2,7 @@
 
 module.exports =
   angular.module('skincareDiagnostic.shared', [
-    require('./directives').name,
+    require('./ui-elements').name,
     require('./filters').name,
     require('./services').name,
     require('./header').name,

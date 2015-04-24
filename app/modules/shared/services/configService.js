@@ -68,12 +68,16 @@ module.exports = /*@ngInject*/
 						questions: [
 							{ 
 								id: 0, 
+								bgImage: 'http://hdwallpaperd.com/wp-content/uploads/closeup-leaves-water-drops-wallpaper-for-1920x1080-hdtv-1080p-18-168.jpg',
 								title: 'This is question 1 in path 2',
 								resultsLayout: 'main', 
 								answers: [
 									{ id: 0, title: 'answer 1', prodId: '123', resultsCopy: 'Product 123 was chosen for you because...'},
 									{ id: 1, title: 'answer 2', prodId: '456', resultsCopy: 'Product 456 was chosen for you because...'}, 
 									{ id: 2, title: 'answer 3', prodId: '789', resultsCopy: 'Product 789 was chosen for you because...'},
+									{ id: 3, title: 'answer 4', prodId: '123', resultsCopy: 'Product 123 was chosen for you because...'},
+									{ id: 4, title: 'answer 5', prodId: '456', resultsCopy: 'Product 456 was chosen for you because...'},
+									{ id: 5, title: 'answer 6', prodId: '789', resultsCopy: 'Product 789 was chosen for you because...'}
 								]
 							},
 							{ 

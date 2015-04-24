@@ -1,0 +1,90 @@
+.answer-btn {
+  -webkit-border-radius: 11;
+  -moz-border-radius: 11;
+  border-radius: 11px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  margin: 20px;
+  text-decoration: none;
+  width: 100px;
+  cursor: pointer;
+}
+
+.answer-btn:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+
+
+/* General button style (reset) */
+.btn {
+
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* Button 3e */
+.btn-3e {
+  padding: 25px 120px 25px 60px;
+  overflow: hidden;
+}
+
+.btn-3e:before {
+  left: auto;
+  right: 10px;
+  z-index: 2;
+}
+
+.btn-3e:after {
+  width: 30%;
+  height: 200%;
+  background: rgba(255,255,255,0.1);
+  z-index: 1;
+  right: 0;
+  top: 0;
+  margin: -5px 0 0 -5px;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform-origin: 0 0;
+  -moz-transform: rotate(-20deg);
+  -ms-transform-origin: 0 0;
+  -ms-transform: rotate(-20deg);
+  transform-origin: 0 0;
+  transform: rotate(-20deg);
+}
+
+.btn-3e:hover:after {
+  width: 40%;
+}
+
+.btn-3 {
+  background: #3498db;
+  color: #fff;
+}

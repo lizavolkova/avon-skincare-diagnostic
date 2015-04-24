@@ -2,17 +2,24 @@
 
 module.exports = /*@ngInject*/
   function questionsService(configService) {
-  	var configs = configService.getQuestions();
+    //get questions object from initial API call
+  	var questions = configService.getQuestions();
+
   return {
-  	getBranch: function() {
-  		return configs.branch;
-  	},
-  	getQ1: function() {
-  		if (configs.branch === true) {
-  			return configs.branchQuestion;
-  		} else {
-  			return 'no branch question';
-  		}
-  	}
+    getQuestion: function(value) {
+      if(value === '0') {
+        if (questions.branch === true) {
+          //return 'on the first question, and branch exists';
+          return questions.branchQuestion;
+        } else {
+          //return 'on the first question and branch does not exist, so return first question for path1';
+          return questions.path1.questions[0];
+        }
+
+      } else {
+        //return 'not on the first question';
+        return questions.path2.questions[0];
+      }
+    }
     };
   };
