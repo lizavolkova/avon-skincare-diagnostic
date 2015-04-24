@@ -4,7 +4,7 @@
 <ul>
 	<li ng-repeat="result in results">
 		<div>For question number: {{result.questionId}}, your product is {{result.prodId}}</div>
-		<div product-detail fsc="{{result.prodId}}"></div>
+		<div product-detail fsc="{{result.prodId}}" flavor="ctrlProducts"></div>
 		<!-- <div ng-repeat="product in products | filter: {fsc: result.prodId }">{{product.title}}</div> -->
 	</li>
 </ul>

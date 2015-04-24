@@ -6,4 +6,6 @@ module.exports =
     //require('./bar').name
   ])
   
-  .controller('questionsController', require('./questionsController'));
+  .controller('questionsController', require('./questionsController'))
+  .factory('questionsService', require('./questionsService'))
+  ;

@@ -5,12 +5,14 @@ module.exports = /*@ngInject*/
     return {
       restrict: 'AE',
       replace: 'true',
+      templateUrl: 'shared/productDetail/productDetail.html',
       scope: {
       	fsc: '@'
       },
       link: function (scope, element, attrs) {
         // Do something awesome
         //scope.fsc = attrs.fsc;
+        //console.log(scope.products[0]);
 
         element.bind("mouseenter", function() {
         	element.addClass('hover');
@@ -19,6 +21,10 @@ module.exports = /*@ngInject*/
         	element.removeClass('hover');
         });
       },
-      templateUrl: 'shared/productDetail/productDetail.html'
+      controller: function($scope, configService) {
+        $scope.products = configService.getProducts();
+        //console.log($scope.test);
+      }
+      
     };
   };

@@ -1,6 +1,12 @@
 <div class="product-detail">
 	<div><b>Product Details</b></div>
 	<div>{{fsc}}</div>
+	<div ng-repeat="product in products | filter:{fsc: fsc }">
+		<div>{{product.title}}</div>
+		<div>{{product.description}}</div>
+		<div>{{product.price | currency}}</div>
+	</div>
+
 	<!-- <div ng-repeat="product in products">{{product.title}}</div> -->
 </div>
 
