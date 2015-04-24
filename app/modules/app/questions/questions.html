@@ -1,7 +1,7 @@
 <div bg-image="{{currentQuestion.bgImage}}">
 <h1>Questions section</h1>
 <p>{{currentQuestion.title}}</p>
-<ul>
+<ul class="answers">
 	<li ng-repeat="answer in currentQuestion.answers" ng-click="saveAnswer(currentQuestion.id, answer.result)">
 		<div class="btn btn-3 btn-3e">{{answer.title}}</div>
 	</li>

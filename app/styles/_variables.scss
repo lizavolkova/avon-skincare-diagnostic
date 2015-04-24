@@ -2,3 +2,58 @@
 // Bootstrap-sass-official
 // ----------------------------------------------------------------------------------------------------
 $icon-font-path: "assets/fonts/bootstrap/";
+
+//******************************
+//GLOBAL COLORS
+//******************************
+$white: #ffffff;
+$black: #000000;
+$pink: #ec008c;
+$blue: #3498db;
+
+//******************************
+//GLOBAL FONTS
+//******************************
+$font-sans-serif: Arial, Helvetica, sans-serif;
+$font-seric: 'Times New Roman', serif;
+
+
+//******************************
+//GLOBAL MIXINS
+//******************************
+//border-radius
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+//to use: .item-class { @include border-radius(10px) }
+
+@mixin column-layout($column, $gap) {
+	-moz-column-count: $column;
+    -moz-column-gap: $gap;
+    -webkit-column-count: $column;
+    -webkit-column-gap: $gap;
+    column-count: $column;
+    column-gap: $gap;
+} 
+//to use: ul { @include column-layout(4, 20px) } 
+
+//Rem and pixel font size support {http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/}
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+//to use: p { @include font-size(14px) }
+
+
+
+
+//******************************
+//GLOBAL ANIMATION MIXINS
+//******************************
