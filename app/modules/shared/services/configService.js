@@ -12,17 +12,19 @@ module.exports = /*@ngInject*/
 				],
 				products: [
 					{
-						fsc: 123,
-						title: 'This is product 123!',
+						fsc: 898222,
+						title: 'Anew Vitale Gel Cleanser',
 						description: 'Product 123 has a lot of amazing benefits you should care about',
 						price: 10,
-						salePrice: 5
+						salePrice: 4.99,
+						img: 'https://02.avoncdn.com/shop/assets/en/prod/prod_1136596_xl.jpg?w=700'
 					},
 					{
-						fsc: 456,
-						title: 'This is product 456!',
+						fsc: 485921,
+						title: 'Anew Clinical Advanced Retexturizing Peel',
 						description: 'Product 456 has a lot of amazing benefits you should care about',
-						price: 15
+						price: 22,
+						img: 'https://01.avoncdn.com/shop/assets/en/prod/prod_1023752_xl.jpg?w=700'
 					},
 					{
 						fsc: 246,

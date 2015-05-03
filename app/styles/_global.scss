@@ -1,21 +1,209 @@
+//******************************
+//GLOBAL MIXINS
+//******************************
+//border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+//to use: .item-class { @include border-radius(10px) }
+
+@mixin column-layout($column, $gap) {
+  -moz-column-count: $column;
+    -moz-column-gap: $gap;
+    -webkit-column-count: $column;
+    -webkit-column-gap: $gap;
+    column-count: $column;
+    column-gap: $gap;
+} 
+//to use: ul { @include column-layout(4, 20px) } 
+
+//Rem and pixel font size support {http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/}
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+//to use: p { @include font-size(14px) }
+
+//******************************
+//GLOBAL ANIMATION MIXINS
+//******************************
+//To use:
+// @include tablet {
+//     font-size: 18px;
+//   }
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+//******************************
+//GLOBAL ANIMATION MIXINS
+//******************************
+@mixin fadeIn($ease, $duration) {
+  opacity: 0;
+-webkit-animation:fadeIn ease-in $ease;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:fadeIn ease-in $ease;
+ animation:fadeIn ease-in $ease;
+ 
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+ 
+ -webkit-animation-duration:$duration;
+ -moz-animation-duration:$duration;
+ animation-duration:$duration;
+} 
+
+//animation delay
+@mixin animation-delay($seconds) {
+  -webkit-animation-delay: $seconds;
+  -moz-animation-delay: $seconds;
+  animation-delay: $seconds;
+}
+
+@mixin transition($property, $duration, $timing, $delay) {
+  transition: $property $duration $timing $delay;
+}
+
 body {
   color: #222;
 }
 
-.welcome {
-  // width: 300px;
-  // height: 510px;
-  // position: absolute;
-  // left: 50%;
-  // top: 50%;
-  // margin-left: -150px;
-  // margin-top: -255px;
+
+//******************************
+//GLOBAL STYLES
+//******************************
+a {
+    color: $pink;
+    &:visited {
+      color: $pink;
+    }
+    &:hover {
+      color: $pink;   
+    }
+    &:active {
+      color: $pink;
+    }
+  }
+
+//******************************
+//GLOBAL INPUTS
+//******************************
+
+
+
+
+//******************************
+//SASS EXAMPLE:
+//******************************
+table.shop_table  {
+  border: none !important;
+  border-color: none;
+  font-size: 1.2rem;
+  thead {
+    th {
+      padding: 12px 0px !important;
+      text-transform: uppercase;
+      font-family: $arimo;
+      color: $pink !important;
+    }
+    tr th {
+      border-top: 0px solid $pink !important;
+      border-bottom: 2px solid $pink !important;
+    }
+  }
+  td {
+    border: none !important;
+    border-bottom: 1px solid $ltpink !important;
+    border-color: none;
+    padding: 30px 0px !important;
+  }
+  .product-thumbnail {
+    width: 150px;
+    @include mobile {
+      display: block !important;
+      width: auto !important;
+    }
+  }
+  img {
+    width: 120px !important;
+  }
+  .product-name {
+    font-family: $arimo;
+    font-size: 1.3rem;
+    vertical-align: top !important;
+    a {
+      color: $dkpink;
+      text-decoration: none;
+      transition: 0.1s linear;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+  .product-price {
+    color: $dkgrey;
+  }
+  .product-remove a{
+    color: $grey !important;
+    font-size: 3rem !important;
+    transition: 0.1s linear;
+    &:hover {
+      background-color: none !important;
+      color: $pink !important;
+    }
+  }
+
 }
 
-a, a:visited {
-  text-decoration: none;
-}
-
-ol, ul {
-	list-style: none;
+table.cart_totals_table {
+  @extend table.shop_table;
+  border-collapse: collapse !important;
+  width: 100% !important;
+  th {
+    width: 50% !important;
+    vertical-align: middle !important;
+    border: none !important;
+    padding: 10px 0px !important;
+  }
+  tr {
+    padding: 0px !important;
+  }
+  td {
+    width: 50% !important;
+    padding:10px 0 !important;
+    border: none !important;
+    text-align: right !important;
+  }
+  tr.order-total {
+    border-collapse: collapse !important;
+    border-top: 1px solid $ltpink !important;
+    border-bottom: 1px solid $ltpink !important;
+  }
 }
